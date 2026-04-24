@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/yong/qt-plugins/build_new/cmake_install.cmake",
+		"/home/yong/qt-plugins/build_new/platformtheme/cmake_install.cmake",
+		"/home/yong/qt-plugins/build_new/widgetstyle/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

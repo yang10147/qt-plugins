@@ -1,29 +1,29 @@
 #.rst:
-# FindQt5PlatformSupport
+# FindQt6PlatformSupport
 # -------
 #
-# Try to find Qt5PlatformSupport on a Unix system.
+# Try to find Qt6PlatformSupport on a Unix system.
 #
 # This will define the following variables:
 #
-# ``Qt5PlatformSupport_FOUND``
-#     True if (the requested version of) Qt5PlatformSupport is available
-# ``Qt5PlatformSupport_VERSION``
-#     The version of Qt5PlatformSupport
-# ``Qt5PlatformSupport_LIBRARIES``
-#     This can be passed to target_link_libraries() instead of the ``Qt5PlatformSupport::Qt5PlatformSupport``
+# ``Qt6PlatformSupport_FOUND``
+#     True if (the requested version of) Qt6PlatformSupport is available
+# ``Qt6PlatformSupport_VERSION``
+#     The version of Qt6PlatformSupport
+# ``Qt6PlatformSupport_LIBRARIES``
+#     This can be passed to target_link_libraries() instead of the ``Qt6PlatformSupport::Qt6PlatformSupport``
 #     target
-# ``Qt5PlatformSupport_INCLUDE_DIRS``
+# ``Qt6PlatformSupport_INCLUDE_DIRS``
 #     This should be passed to target_include_directories() if the target is not
 #     used for linking
-# ``Qt5PlatformSupport_DEFINITIONS``
+# ``Qt6PlatformSupport_DEFINITIONS``
 #     This should be passed to target_compile_options() if the target is not
 #     used for linking
 #
-# If ``Qt5PlatformSupport_FOUND`` is TRUE, it will also define the following imported target:
+# If ``Qt6PlatformSupport_FOUND`` is TRUE, it will also define the following imported target:
 #
-# ``Qt5PlatformSupport::Qt5PlatformSupport``
-#     The Qt5PlatformSupport library
+# ``Qt6PlatformSupport::Qt6PlatformSupport``
+#     The Qt6PlatformSupport library
 #
 # In general we recommend using the imported target, as it is easier to use.
 # Bear in mind, however, that if the target is in the link interface of an
@@ -58,63 +58,63 @@
 #=============================================================================
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)
-    message(FATAL_ERROR "CMake 2.8.12 is required by FindQt5PlatformSupport.cmake")
+    message(FATAL_ERROR "CMake 2.8.12 is required by FindQt6PlatformSupport.cmake")
 endif()
 if(CMAKE_MINIMUM_REQUIRED_VERSION VERSION_LESS 2.8.12)
-    message(AUTHOR_WARNING "Your project should require at least CMake 2.8.12 to use FindQt5PlatformSupport.cmake")
+    message(AUTHOR_WARNING "Your project should require at least CMake 2.8.12 to use FindQt6PlatformSupport.cmake")
 endif()
 
 # Use pkg-config to get the directories and then use these values
 # in the FIND_PATH() and FIND_LIBRARY() calls
 find_package(PkgConfig)
-pkg_check_modules(PKG_Qt5PlatformSupport QUIET Qt5Gui)
+pkg_check_modules(PKG_Qt6PlatformSupport QUIET Qt6Gui)
 
-set(Qt5PlatformSupport_DEFINITIONS ${PKG_Qt5PlatformSupport_CFLAGS_OTHER})
-set(Qt5PlatformSupport_VERSION ${PKG_Qt5PlatformSupport_VERSION})
+set(Qt6PlatformSupport_DEFINITIONS ${PKG_Qt6PlatformSupport_CFLAGS_OTHER})
+set(Qt6PlatformSupport_VERSION ${PKG_Qt6PlatformSupport_VERSION})
 
-find_path(Qt5PlatformSupport_INCLUDE_DIR
+find_path(Qt6PlatformSupport_INCLUDE_DIR
     NAMES
         QtPlatformSupport/private/qfontconfigdatabase_p.h
     HINTS
-        ${PKG_Qt5PlatformSupport_INCLUDEDIR}/QtPlatformSupport/${PKG_Qt5PlatformSupport_VERSION}/
+        ${PKG_Qt6PlatformSupport_INCLUDEDIR}/QtPlatformSupport/${PKG_Qt6PlatformSupport_VERSION}/
 )
-find_library(Qt5PlatformSupport_LIBRARY
+find_library(Qt6PlatformSupport_LIBRARY
     NAMES
-        Qt5PlatformSupport
+        Qt6PlatformSupport
     HINTS
-        ${PKG_Qt5PlatformSupport_LIBRARY_DIRS}
+        ${PKG_Qt6PlatformSupport_LIBRARY_DIRS}
 )
 
 include(FindPackageHandleStandardArgs)
-find_package_handle_standard_args(Qt5PlatformSupport
+find_package_handle_standard_args(Qt6PlatformSupport
     FOUND_VAR
-        Qt5PlatformSupport_FOUND
+        Qt6PlatformSupport_FOUND
     REQUIRED_VARS
-        Qt5PlatformSupport_LIBRARY
-        Qt5PlatformSupport_INCLUDE_DIR
+        Qt6PlatformSupport_LIBRARY
+        Qt6PlatformSupport_INCLUDE_DIR
     VERSION_VAR
-        Qt5PlatformSupport_VERSION
+        Qt6PlatformSupport_VERSION
 )
 
-if(Qt5PlatformSupport_FOUND AND NOT TARGET Qt5PlatformSupport::Qt5PlatformSupport)
-    add_library(Qt5PlatformSupport::Qt5PlatformSupport UNKNOWN IMPORTED)
-    set_target_properties(Qt5PlatformSupport::Qt5PlatformSupport PROPERTIES
-        IMPORTED_LOCATION "${Qt5PlatformSupport_LIBRARY}"
-        INTERFACE_COMPILE_OPTIONS "${Qt5PlatformSupport_DEFINITIONS}"
-        INTERFACE_INCLUDE_DIRECTORIES "${Qt5PlatformSupport_INCLUDE_DIR}"
+if(Qt6PlatformSupport_FOUND AND NOT TARGET Qt6PlatformSupport::Qt6PlatformSupport)
+    add_library(Qt6PlatformSupport::Qt6PlatformSupport UNKNOWN IMPORTED)
+    set_target_properties(Qt6PlatformSupport::Qt6PlatformSupport PROPERTIES
+        IMPORTED_LOCATION "${Qt6PlatformSupport_LIBRARY}"
+        INTERFACE_COMPILE_OPTIONS "${Qt6PlatformSupport_DEFINITIONS}"
+        INTERFACE_INCLUDE_DIRECTORIES "${Qt6PlatformSupport_INCLUDE_DIR}"
     )
 endif()
 
-mark_as_advanced(Qt5PlatformSupport_LIBRARY Qt5PlatformSupport_INCLUDE_DIR)
+mark_as_advanced(Qt6PlatformSupport_LIBRARY Qt6PlatformSupport_INCLUDE_DIR)
 
 # compatibility variables
-set(Qt5PlatformSupport_LIBRARIES ${Qt5PlatformSupport_LIBRARY})
-set(Qt5PlatformSupport_INCLUDE_DIRS ${Qt5PlatformSupport_INCLUDE_DIR})
-set(Qt5PlatformSupport_VERSION_STRING ${Qt5PlatformSupport_VERSION})
+set(Qt6PlatformSupport_LIBRARIES ${Qt6PlatformSupport_LIBRARY})
+set(Qt6PlatformSupport_INCLUDE_DIRS ${Qt6PlatformSupport_INCLUDE_DIR})
+set(Qt6PlatformSupport_VERSION_STRING ${Qt6PlatformSupport_VERSION})
 
 
 include(FeatureSummary)
-set_package_properties(Qt5PlatformSupport PROPERTIES
+set_package_properties(Qt6PlatformSupport PROPERTIES
     URL "http://www.qt.io"
     DESCRIPTION "Qt PlatformSupport module."
 )

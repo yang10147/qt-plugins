@@ -1,0 +1,5 @@
+-I/home/yong/qt-plugins/platformtheme
+-I/home/yong/qt-plugins/build_new/platformtheme
+-o
+/home/yong/qt-plugins/build_new/platformtheme/moc_statusnotifierwatcher_interface.cpp
+/home/yong/qt-plugins/build_new/platformtheme/statusnotifierwatcher_interface.h

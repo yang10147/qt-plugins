@@ -1,0 +1,1315 @@
+make: 进入目录“/home/yong/qt-plugins/build_new/widgetstyle”
+[  0%] Built target cutefish-style_autogen_timestamp_deps
+[  9%] Built target cutefish-style_autogen
+[ 18%] Building CXX object widgetstyle/CMakeFiles/cutefish-style.dir/basestyle.cpp.o
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: In function ‘void {anonymous}::drawCheck(QPainter*, const QPen&, const QRect&, const QColor&, const QColor&)’:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:37:143: 错误：对‘QPainter::drawPolyline(QPoint, QPoint, QPoint)’的调用没有匹配的函数
+   37 |     static inline void drawCheck(QPainter* p, const QPen& pen, const QRect& r, const QColor&, const QColor&) { p->setPen(pen); p->drawPolyline(r.bottomLeft(), r.center(), r.topRight()); }
+      |                                                                                                                                ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:37:143: 附注：there are 4 candidates
+包含于文件 /usr/include/qt6/QtGui/QPainter:1,
+        于 /home/yong/qt-plugins/widgetstyle/basestyle.h:14,
+        于 /home/yong/qt-plugins/widgetstyle/basestyle.cpp:8:
+/usr/include/qt6/QtGui/qpainter.h:281:10: 附注：备选 1: ‘void QPainter::drawPolyline(const QPointF*, int)’
+  281 |     void drawPolyline(const QPointF *points, int pointCount);
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtGui/qpainter.h:281:10: 附注：candidate expects 2 arguments, 3 provided
+/usr/include/qt6/QtGui/qpainter.h:501:13: 附注：备选 2: ‘void QPainter::drawPolyline(const QPolygonF&)’
+  501 | inline void QPainter::drawPolyline(const QPolygonF &polyline)
+      |             ^~~~~~~~
+/usr/include/qt6/QtGui/qpainter.h:501:13: 附注：candidate expects 1 argument, 3 provided
+/usr/include/qt6/QtGui/qpainter.h:283:10: 附注：candidate 3: ‘void QPainter::drawPolyline(const QPoint*, int)’
+  283 |     void drawPolyline(const QPoint *points, int pointCount);
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtGui/qpainter.h:283:10: 附注：candidate expects 2 arguments, 3 provided
+/usr/include/qt6/QtGui/qpainter.h:506:13: 附注：candidate 4: ‘void QPainter::drawPolyline(const QPolygon&)’
+  506 | inline void QPainter::drawPolyline(const QPolygon &polyline)
+      |             ^~~~~~~~
+/usr/include/qt6/QtGui/qpainter.h:506:13: 附注：candidate expects 1 argument, 3 provided
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: In member function ‘virtual void BaseStyle::drawPrimitive(QStyle::PrimitiveElement, const QStyleOption*, QPainter*, const QWidget*) const’:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:68:23: 错误：‘fgColor’不是一个类、命名空间或枚举
+   68 |             fgColor = fgColor::Color::fgColor;
+      |                       ^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:77:53: 错误：invalid initialization of reference of type ‘const QRect&’ from expression of type ‘QRectF’
+   77 |         drawCheck(painter, d->checkBox_pen_scratch, r_, swatch, fgColor);
+      |                                                     ^~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:37:77: 附注：in passing argument 3 of ‘void {anonymous}::drawCheck(QPainter*, const QPen&, const QRect&, const QColor&, const QColor&)’
+   37 |     static inline void drawCheck(QPainter* p, const QPen& pen, const QRect& r, const QColor&, const QColor&) { p->setPen(pen); p->drawPolyline(r.bottomLeft(), r.center(), r.topRight()); }
+      |                                                                ~~~~~~~~~~~~~^
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:133:42: 错误：too many arguments to function ‘QRect {anonymous}::expandRect(const QRect&, int)’
+  133 |         fillRectEdges(painter, expandRect(option->rect, edge, -1), edge, 1, swatch);
+      |                                ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:38:25: 附注：在此声明
+   38 |     static inline QRect expandRect(const QRect& r, int i) { return r.adjusted(-i, -i, i, i); }
+      |                         ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:160:17: 错误：‘element’ was not declared in this scope; did you mean ‘event’?
+  160 |         switch (element) {
+      |                 ^~~~~~~
+      |                 event
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:195:35: 错误：对不完全的类型‘const class QToolButton’的非法使用
+  195 |             if (tbutton && tbutton->popupMode() != QToolButton::InstantPopup && tbutton->defaultAction()) {
+      |                                   ^~
+包含于文件 /usr/include/qt6/QtWidgets/qwidget.h:13,
+        于 /usr/include/qt6/QtWidgets/qcombobox.h:9,
+        于 /usr/include/qt6/QtWidgets/QComboBox:1,
+        于 /home/yong/qt-plugins/widgetstyle/basestyle.cpp:1:
+/usr/include/qt6/QtGui/qaction.h:234:18: 附注：forward declaration of ‘class QToolButton’
+  234 |     friend class QToolButton;
+      |                  ^~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:195:65: 错误：嵌套名指定中使用了不完全的类型‘QToolButton’
+  195 |             if (tbutton && tbutton->popupMode() != QToolButton::InstantPopup && tbutton->defaultAction()) {
+      |                                                                 ^~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:195:88: 错误：对不完全的类型‘const class QToolButton’的非法使用
+  195 |             if (tbutton && tbutton->popupMode() != QToolButton::InstantPopup && tbutton->defaultAction()) {
+      |                                                                                        ^~
+/usr/include/qt6/QtGui/qaction.h:234:18: 附注：forward declaration of ‘class QToolButton’
+  234 |     friend class QToolButton;
+      |                  ^~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:228:36: 错误：‘HeaderSortIndicator_HOffset’不是‘Ph’的成员
+  228 |         QPoint offset = QPoint(Ph::HeaderSortIndicator_HOffset, Ph::HeaderSortIndicator_VOffset);
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:228:69: 错误：‘HeaderSortIndicator_VOffset’不是‘Ph’的成员
+  228 |         QPoint offset = QPoint(Ph::HeaderSortIndicator_HOffset, Ph::HeaderSortIndicator_VOffset);
+      |                                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:229:31: 错误：‘Ph::DeriveColors’尚未声明
+  229 |         qreal lightness = Ph::DeriveColors::hack_isLightPalette(widget->palette()) ? 0.03 : 0.0;
+      |                               ^~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:231:22: 错误：too many arguments to function ‘void {anonymous}::drawArrow(QPainter*, const QRect&, int, const QBrush&)’
+  231 |             drawArrow(painter, r.translated(offset), Qt::DownArrow, swatch, true, lightness);
+      |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:35:24: 附注：在此声明
+   35 |     static inline void drawArrow(QPainter* p, const QRect& r, int, const QBrush& b) { p->fillRect(r, b); }
+      |                        ^~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:233:22: 错误：too many arguments to function ‘void {anonymous}::drawArrow(QPainter*, const QRect&, int, const QBrush&)’
+  233 |             drawArrow(painter, r.translated(offset), Qt::UpArrow, swatch, true, lightness);
+      |             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:35:24: 附注：在此声明
+   35 |     static inline void drawArrow(QPainter* p, const QRect& r, int, const QBrush& b) { p->fillRect(r, b); }
+      |                        ^~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:278:36: 错误：‘ToolButton_Rounding’不是‘Ph’的成员
+  278 |         const qreal rounding = Ph::ToolButton_Rounding;
+      |                                    ^~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:287:24: 错误：conversion from ‘int’ to ‘QColor’ is ambiguous
+  287 |             specular = 0;
+      |                        ^
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:287:24: 附注：there are 2 candidates
+包含于文件 /usr/include/qt6/QtGui/qpixmap.h:9,
+        于 /usr/include/qt6/QtGui/qicon.h:10,
+        于 /usr/include/qt6/QtGui/qaction.h:11:
+/usr/include/qt6/QtGui/qcolor.h:280:8: 附注：备选 1: ‘QColor::QColor(const char*)’
+  280 | inline QColor::QColor(const char *aname)
+      |        ^~~~~~
+/usr/include/qt6/QtGui/qcolor.h:47:5: 附注：备选 2: ‘QColor::QColor(QRgb)’
+   47 |     QColor(QRgb rgb) noexcept;
+      |     ^~~~~~
+/usr/include/qt6/QtGui/qcolor.h:29:20: 附注：initializing argument 1 of ‘constexpr QColor& QColor::operator=(QColor&&)’
+   29 | class Q_GUI_EXPORT QColor
+      |                    ^~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:294:62: 错误：不能将‘Swatchy’ {aka ‘QColor’}转换为‘int’
+  294 |         paintBorderedRoundRect(painter, r, rounding, swatch, outline, fill);
+      |                                                              ^~~~~~~
+      |                                                              |
+      |                                                              Swatchy {aka QColor}
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:36:96: 附注：initializing argument 5 of ‘void {anonymous}::paintBorderedRoundRect(QPainter*, const QRect&, int, const QColor&, int, int)’
+   36 |     static inline void paintBorderedRoundRect(QPainter* p, const QRect& r, int, const QColor&, int, int) { p->drawRoundedRect(r, 4, 4); }
+      |                                                                                                ^~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:295:85: 错误：不能将‘Swatchy’ {aka ‘QColor’}转换为‘int’
+  295 |         paintBorderedRoundRect(painter, r.adjusted(1, 1, -1, -1), rounding, swatch, specular, 0);
+      |                                                                                     ^~~~~~~~
+      |                                                                                     |
+      |                                                                                     Swatchy {aka QColor}
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:36:96: 附注：initializing argument 5 of ‘void {anonymous}::paintBorderedRoundRect(QPainter*, const QRect&, int, const QColor&, int, int)’
+   36 |     static inline void paintBorderedRoundRect(QPainter* p, const QRect& r, int, const QColor&, int, int) { p->drawRoundedRect(r, 4, 4); }
+      |                                                                                                ^~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:313:36: 错误：‘LineEdit_Rounding’不是‘Ph’的成员
+  313 |         const qreal rounding = Ph::LineEdit_Rounding;
+      |                                    ^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:316:62: 错误：不能将‘QColor’转换为‘int’
+  316 |         paintBorderedRoundRect(painter, r, rounding, swatch, pen, 0);
+      |                                                              ^~~
+      |                                                              |
+      |                                                              QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:36:96: 附注：initializing argument 5 of ‘void {anonymous}::paintBorderedRoundRect(QPainter*, const QRect&, int, const QColor&, int, int)’
+   36 |     static inline void paintBorderedRoundRect(QPainter* p, const QRect& r, int, const QColor&, int, int) { p->drawRoundedRect(r, 4, 4); }
+      |                                                                                                ^~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:317:14: 错误：‘struct {anonymous}::PSave’ has no member named ‘restore’
+  317 |         save.restore();
+      |              ^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:318:17: 错误：‘OverhangShadows’不是‘Ph’的成员
+  318 |         if (Ph::OverhangShadows && !hasFocus && isEnabled) {
+      |                 ^~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:340:32: 错误：‘class QColor’ has no member named ‘pen’
+  340 |         painter->setPen(swatch.pen(Ph::SwatchColors::0));
+      |                                ^~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:340:40: 错误：‘Ph::SwatchColors’尚未声明
+  340 |         painter->setPen(swatch.pen(Ph::SwatchColors::0));
+      |                                        ^~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:340:54: 错误：expected unqualified-id before numeric constant
+  340 |         painter->setPen(swatch.pen(Ph::SwatchColors::0));
+      |                                                      ^
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:344:52: 错误：‘LineEdit_Rounding’不是‘Ph’的成员
+  344 |         painter->drawRoundedRect(option->rect, Ph::LineEdit_Rounding, Ph::LineEdit_Rounding);
+      |                                                    ^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:344:75: 错误：‘LineEdit_Rounding’不是‘Ph’的成员
+  344 |         painter->drawRoundedRect(option->rect, Ph::LineEdit_Rounding, Ph::LineEdit_Rounding);
+      |                                                                           ^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:347:14: 错误：‘struct {anonymous}::PSave’ has no member named ‘restore’
+  347 |         save.restore();
+      |              ^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:361:26: 错误：‘state’ was not declared in this scope; did you mean ‘State’?
+  361 |         bool isPressed = state & State_Sunken;
+      |                          ^~~~~
+      |                          State
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:377:21: 错误：‘IndicatorShadows’不是‘Ph’的成员
+  377 |             if (Ph::IndicatorShadows && !isPressed && isEnabled) {
+      |                     ^~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:390:17: 错误：‘drawHyphen’不是‘Ph’的成员
+  390 |             Ph::drawHyphen(painter, d->checkBox_pen_scratch, r_, swatch, fgColor);
+      |                 ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:399:57: 错误：invalid initialization of reference of type ‘const QRect&’ from expression of type ‘QRectF’
+  399 |             drawCheck(painter, d->checkBox_pen_scratch, r_, swatch, fgColor);
+      |                                                         ^~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:37:77: 附注：in passing argument 3 of ‘void {anonymous}::drawCheck(QPainter*, const QPen&, const QRect&, const QColor&, const QColor&)’
+   37 |     static inline void drawCheck(QPainter* p, const QPen& pen, const QRect& r, const QColor&, const QColor&) { p->setPen(pen); p->drawPolyline(r.bottomLeft(), r.center(), r.topRight()); }
+      |                                                                ~~~~~~~~~~~~~^
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:407:25: 错误：‘state’ was not declared in this scope; did you mean ‘State’?
+  407 |         bool isSunken = state & State_Sunken;
+      |                         ^~~~~
+      |                         State
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:418:32: 错误：‘class QColor’ has no member named ‘pen’
+  418 |         painter->setPen(swatch.pen(outlineColor));
+      |                                ^~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:420:17: 错误：‘IndicatorShadows’不是‘Ph’的成员
+  420 |         if (Ph::IndicatorShadows && !isSunken && isEnabled) {
+      |                 ^~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:424:26: 错误：聚合‘QPainterPath path0’类型不完全，无法被定义
+  424 |             QPainterPath path0, path1;
+      |                          ^~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:424:33: 错误：聚合‘QPainterPath path1’类型不完全，无法被定义
+  424 |             QPainterPath path0, path1;
+      |                                 ^~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:427:26: 错误：变量‘QPainterPath path2’有初始值设定，但是类型不完全
+  427 |             QPainterPath path2 = path0 - path1;
+      |                          ^~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:485:56: 错误：对不完全的类型‘const class QAbstractItemView’的非法使用
+  485 |                     const auto selectionMode = itemView->selectionMode();
+      |                                                        ^~
+包含于文件 /usr/include/qt6/QtWidgets/qcombobox.h:10:
+/usr/include/qt6/QtWidgets/qabstractitemdelegate.h:19:7: 附注：forward declaration of ‘class QAbstractItemView’
+   19 | class QAbstractItemView;
+      |       ^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:486:61: 错误：嵌套名指定中使用了不完全的类型‘QAbstractItemView’
+  486 |                     if (selectionMode == QAbstractItemView::SingleSelection) {
+      |                                                             ^~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:499:65: 错误：ISO C++ 不允许声明无类型的‘type name’ [-fpermissive]
+  499 |                         if (auto tableView = qobject_cast<const QTableView*>(itemView)) {
+      |                                                                 ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:499:46: 错误：模板实参表语法错误
+  499 |                         if (auto tableView = qobject_cast<const QTableView*>(itemView)) {
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:499:77: 错误：对‘qobject_cast<<expression error> >(const QAbstractItemView*&)’的调用没有匹配的函数
+  499 |                         if (auto tableView = qobject_cast<const QTableView*>(itemView)) {
+      |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:499:77: 附注：there are 5 candidates
+包含于文件 /usr/include/qt6/QtWidgets/qwidget.h:10:
+/usr/include/qt6/QtCore/qobject.h:426:10: 附注：备选 1: ‘template<class T> T qobject_cast(QObject*)’
+  426 | inline T qobject_cast(QObject *object)
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:426:10: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:499:77: 错误：模板第 1 个参数无效
+  499 |                         if (auto tableView = qobject_cast<const QTableView*>(itemView)) {
+      |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:432:10: 附注：备选 2: ‘template<class T> T qobject_cast(const QObject*)’
+  432 | inline T qobject_cast(const QObject *object)
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:432:10: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:499:77: 错误：模板第 1 个参数无效
+  499 |                         if (auto tableView = qobject_cast<const QTableView*>(itemView)) {
+      |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+包含于文件 /usr/include/qt6/QtCore/qsharedpointer.h:13,
+        于 /usr/include/qt6/QtCore/qdebug.h:21,
+        于 /usr/include/qt6/QtCore/qvariant.h:13,
+        于 /usr/include/qt6/QtGui/qaction.h:13:
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:997:1: 附注：candidate 3: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(const QSharedPointer<T>&)’
+  997 | qobject_cast(const QSharedPointer<T> &src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:997:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:499:77: 错误：模板第 1 个参数无效
+  499 |                         if (auto tableView = qobject_cast<const QTableView*>(itemView)) {
+      |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1003:1: 附注：candidate 4: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(QSharedPointer<T>&&)’
+ 1003 | qobject_cast(QSharedPointer<T> &&src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1003:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:499:77: 错误：模板第 1 个参数无效
+  499 |                         if (auto tableView = qobject_cast<const QTableView*>(itemView)) {
+      |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1009:1: 附注：candidate 5: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(const QWeakPointer<T>&)’
+ 1009 | qobject_cast(const QWeakPointer<T> &src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1009:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:499:77: 错误：模板第 1 个参数无效
+  499 |                         if (auto tableView = qobject_cast<const QTableView*>(itemView)) {
+      |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:503:61: 错误：对不完全的类型‘const class QAbstractItemView’的非法使用
+  503 |                         const auto selectionModel = itemView->selectionModel();
+      |                                                             ^~
+/usr/include/qt6/QtWidgets/qabstractitemdelegate.h:19:7: 附注：forward declaration of ‘class QAbstractItemView’
+   19 | class QAbstractItemView;
+      |       ^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:514:76: 错误：对不完全的类型‘const class QAbstractItemView’的非法使用
+  514 |                                     const auto selectionBehavior = itemView->selectionBehavior();
+      |                                                                            ^~
+/usr/include/qt6/QtWidgets/qabstractitemdelegate.h:19:7: 附注：forward declaration of ‘class QAbstractItemView’
+   19 | class QAbstractItemView;
+      |       ^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:516:85: 错误：嵌套名指定中使用了不完全的类型‘QAbstractItemView’
+  516 |                                         || (selectionBehavior == QAbstractItemView::SelectRows && range.height() == 1)
+      |                                                                                     ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:517:85: 错误：嵌套名指定中使用了不完全的类型‘QAbstractItemView’
+  517 |                                         || (selectionBehavior == QAbstractItemView::SelectColumns
+      |                                                                                     ^~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:556:40: 错误：‘FrameFocusRect_Rounding’不是‘Ph’的成员
+  556 |             painter, option->rect, Ph::FrameFocusRect_Rounding, swatch, fgColor, 0);
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:574:36: 错误：‘PushButton_Rounding’不是‘Ph’的成员
+  574 |         const qreal rounding = Ph::PushButton_Rounding;
+      |                                    ^~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:591:62: 错误：不能将‘Swatchy’ {aka ‘QColor’}转换为‘int’
+  591 |         paintBorderedRoundRect(painter, r, rounding, swatch, outline, fill);
+      |                                                              ^~~~~~~
+      |                                                              |
+      |                                                              Swatchy {aka QColor}
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:36:96: 附注：initializing argument 5 of ‘void {anonymous}::paintBorderedRoundRect(QPainter*, const QRect&, int, const QColor&, int, int)’
+   36 |     static inline void paintBorderedRoundRect(QPainter* p, const QRect& r, int, const QColor&, int, int) { p->drawRoundedRect(r, 4, 4); }
+      |                                                                                                ^~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:592:85: 错误：不能将‘Swatchy’ {aka ‘QColor’}转换为‘int’
+  592 |         paintBorderedRoundRect(painter, r.adjusted(1, 1, -1, -1), rounding, swatch, specular, 0);
+      |                                                                                     ^~~~~~~~
+      |                                                                                     |
+      |                                                                                     Swatchy {aka QColor}
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:36:96: 附注：initializing argument 5 of ‘void {anonymous}::paintBorderedRoundRect(QPainter*, const QRect&, int, const QColor&, int, int)’
+   36 |     static inline void paintBorderedRoundRect(QPainter* p, const QRect& r, int, const QColor&, int, int) { p->drawRoundedRect(r, 4, 4); }
+      |                                                                                                ^~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:610:22: 错误：conversion from ‘int’ to ‘Swatchy’ {aka ‘QColor’} is ambiguous
+  610 |         Swatchy bg = 0;
+      |                      ^
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:610:22: 附注：there are 2 candidates
+/usr/include/qt6/QtGui/qcolor.h:280:8: 附注：备选 1: ‘QColor::QColor(const char*)’
+  280 | inline QColor::QColor(const char *aname)
+      |        ^~~~~~
+/usr/include/qt6/QtGui/qcolor.h:47:5: 附注：备选 2: ‘QColor::QColor(QRgb)’
+   47 |     QColor(QRgb rgb) noexcept;
+      |     ^~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:617:13: 错误：could not convert ‘bg’ from ‘Swatchy’ {aka ‘QColor’} to ‘bool’
+  617 |         if (bg) {
+      |             ^~
+      |             |
+      |             Swatchy {aka QColor}
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:618:17: 错误：‘paintSolidRoundRect’不是‘Ph’的成员
+  618 |             Ph::paintSolidRoundRect(painter, option->rect, Ph::PushButton_Rounding, swatch, bg);
+      |                 ^~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:618:64: 错误：‘PushButton_Rounding’不是‘Ph’的成员
+  618 |             Ph::paintSolidRoundRect(painter, option->rect, Ph::PushButton_Rounding, swatch, bg);
+      |                                                                ^~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:620:27: 错误：‘class QColor’ has no member named ‘pen’
+  620 |         QPen pen = swatch.pen(fg);
+      |                           ^~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:633:34: 错误：‘element’ was not declared in this scope; did you mean ‘event’?
+  633 |         switch (static_cast<int>(element)) {
+      |                                  ^~~~~~~
+      |                                  event
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:644:14: 错误：‘struct {anonymous}::PSave’ has no member named ‘restore’
+  644 |         save.restore();
+      |              ^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:668:28: 错误：‘strokedRect’在此作用域中尚未声明
+  668 |         QRectF frameRect = strokedRect(option->rect, 1);
+      |                            ^~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:678:25: 错误：对不完全的类型‘class BlurHelper’的非法使用
+  678 |             m_blurHelper->enableBlurBehind(const_cast<QWidget *>(widget), true, DefaultFrame_Radius);
+      |                         ^~
+/home/yong/qt-plugins/widgetstyle/basestyle.h:20:7: 附注：forward declaration of ‘class BlurHelper’
+   20 | class BlurHelper;
+      |       ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: In member function ‘virtual void BaseStyle::drawControl(QStyle::ControlElement, const QStyleOption*, QPainter*, const QWidget*) const’:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:737:29: 错误：‘getCachedSwatchOfQPalette’不是‘Ph’的成员
+  737 |     auto ph_swatchPtr = Ph::getCachedSwatchOfQPalette(d->swatchCache, &d->headSwatchFastKey, option->palette);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:738:15: 错误：‘Phantom’不是命名空间‘Ph’中的一个类型名
+  738 |     const Ph::Phantom::Color& swatch = *ph_swatchPtr.data();
+      |               ^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:785:26: 错误：‘SplitterMaxLength’不是‘Ph’的成员
+  785 |         int length = Ph::SplitterMaxLength;
+      |                          ^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:803:13: 错误：‘paintSolidRoundRect’不是‘Ph’的成员
+  803 |         Ph::paintSolidRoundRect(painter, filledRect, radius, swatch, fgColor);
+      |             ^~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:803:62: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+  803 |         Ph::paintSolidRoundRect(painter, filledRect, radius, swatch, fgColor);
+      |                                                              ^~~~~~
+      |                                                              Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:803:70: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+  803 |         Ph::paintSolidRoundRect(painter, filledRect, radius, swatch, fgColor);
+      |                                                                      ^~~~~~~
+      |                                                                      QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:819:59: 警告：‘bool QWidget::isTopLevel() const’ 已被弃用: Use isWindow() [-Wdeprecated-declarations]
+  819 |         dimHighlight.setAlpha(widget && widget->isTopLevel() ? 255 : 80);
+      |                                         ~~~~~~~~~~~~~~~~~~^~
+/usr/include/qt6/QtWidgets/qwidget.h:812:13: 附注：在此声明
+  812 | inline bool QWidget::isTopLevel() const
+      |             ^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:840:63: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+  840 |                     painter->fillRect(rcx + i, rcy + j, 2, 2, swatch);
+      |                                                               ^~~~~~
+      |                                                               Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:853:42: 错误：ISO C++ 不允许声明无类型的‘type name’ [-fpermissive]
+  853 |         if (auto tb = qobject_cast<const QToolBar*>(widget)) {
+      |                                          ^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:853:23: 错误：模板实参表语法错误
+  853 |         if (auto tb = qobject_cast<const QToolBar*>(widget)) {
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:853:52: 错误：对‘qobject_cast<<expression error> >(const QWidget*&)’的调用没有匹配的函数
+  853 |         if (auto tb = qobject_cast<const QToolBar*>(widget)) {
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:853:52: 附注：there are 5 candidates
+/usr/include/qt6/QtCore/qobject.h:426:10: 附注：备选 1: ‘template<class T> T qobject_cast(QObject*)’
+  426 | inline T qobject_cast(QObject *object)
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:426:10: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:853:52: 错误：模板第 1 个参数无效
+  853 |         if (auto tb = qobject_cast<const QToolBar*>(widget)) {
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:432:10: 附注：备选 2: ‘template<class T> T qobject_cast(const QObject*)’
+  432 | inline T qobject_cast(const QObject *object)
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:432:10: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:853:52: 错误：模板第 1 个参数无效
+  853 |         if (auto tb = qobject_cast<const QToolBar*>(widget)) {
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:997:1: 附注：candidate 3: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(const QSharedPointer<T>&)’
+  997 | qobject_cast(const QSharedPointer<T> &src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:997:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:853:52: 错误：模板第 1 个参数无效
+  853 |         if (auto tb = qobject_cast<const QToolBar*>(widget)) {
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1003:1: 附注：candidate 4: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(QSharedPointer<T>&&)’
+ 1003 | qobject_cast(QSharedPointer<T> &&src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1003:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:853:52: 错误：模板第 1 个参数无效
+  853 |         if (auto tb = qobject_cast<const QToolBar*>(widget)) {
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1009:1: 附注：candidate 5: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(const QWeakPointer<T>&)’
+ 1009 | qobject_cast(const QWeakPointer<T> &src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1009:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:853:52: 错误：模板第 1 个参数无效
+  853 |         if (auto tb = qobject_cast<const QToolBar*>(widget)) {
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:857:55: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+  857 |             fillRectOutline(painter, option->rect, 1, swatch);
+      |                                                       ^~~~~~
+      |                                                       Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:913:42: 错误：ISO C++ 不允许声明无类型的‘type name’ [-fpermissive]
+  913 |             auto hv = qobject_cast<const QHeaderView*>(widget);
+      |                                          ^~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:913:23: 错误：模板实参表语法错误
+  913 |             auto hv = qobject_cast<const QHeaderView*>(widget);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:913:55: 错误：对‘qobject_cast<<expression error> >(const QWidget*&)’的调用没有匹配的函数
+  913 |             auto hv = qobject_cast<const QHeaderView*>(widget);
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:913:55: 附注：there are 5 candidates
+/usr/include/qt6/QtCore/qobject.h:426:10: 附注：备选 1: ‘template<class T> T qobject_cast(QObject*)’
+  426 | inline T qobject_cast(QObject *object)
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:426:10: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:913:55: 错误：模板第 1 个参数无效
+  913 |             auto hv = qobject_cast<const QHeaderView*>(widget);
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:432:10: 附注：备选 2: ‘template<class T> T qobject_cast(const QObject*)’
+  432 | inline T qobject_cast(const QObject *object)
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:432:10: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:913:55: 错误：模板第 1 个参数无效
+  913 |             auto hv = qobject_cast<const QHeaderView*>(widget);
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:997:1: 附注：candidate 3: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(const QSharedPointer<T>&)’
+  997 | qobject_cast(const QSharedPointer<T> &src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:997:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:913:55: 错误：模板第 1 个参数无效
+  913 |             auto hv = qobject_cast<const QHeaderView*>(widget);
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1003:1: 附注：candidate 4: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(QSharedPointer<T>&&)’
+ 1003 | qobject_cast(QSharedPointer<T> &&src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1003:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:913:55: 错误：模板第 1 个参数无效
+  913 |             auto hv = qobject_cast<const QHeaderView*>(widget);
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1009:1: 附注：candidate 5: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(const QWeakPointer<T>&)’
+ 1009 | qobject_cast(const QWeakPointer<T> &src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1009:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:913:55: 错误：模板第 1 个参数无效
+  913 |             auto hv = qobject_cast<const QHeaderView*>(widget);
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1004:34: 错误：too many arguments to function ‘QRect {anonymous}::expandRect(const QRect&, int)’
+ 1004 |         QRect bgRect = expandRect(rect, edges, -1);
+      |                        ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:38:25: 附注：在此声明
+   38 |     static inline QRect expandRect(const QRect& r, int i) { return r.adjusted(-i, -i, i, i); }
+      |                         ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1005:35: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1005 |         painter->fillRect(bgRect, swatch);
+      |                                   ^~~~~~
+      |                                   Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1017:49: 警告：‘QPixmap QIcon::pixmap(QWindow*, const QSize&, Mode, State) const’ 已被弃用: Use pixmap(size, devicePixelRatio) instead [-Wdeprecated-declarations]
+ 1017 |             QPixmap pixmap = header->icon.pixmap(window,
+      |                              ~~~~~~~~~~~~~~~~~~~^~~~~~~~
+ 1018 |                                                  QSize(iconExtent, iconExtent),
+      |                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1019 |                                                  (header->state & State_Enabled) ? QIcon::Normal : QIcon::Disabled);
+      |                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtGui/qicon.h:213:13: 附注：在此声明
+  213 |     QPixmap pixmap(QWindow *window, const QSize &size, Mode mode = Normal, State state = Off) const;
+      |             ^~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1058:50: 错误：ISO C++ 不允许声明无类型的‘type name’ [-fpermissive]
+ 1058 |             auto headerview = qobject_cast<const QHeaderView*>(widget);
+      |                                                  ^~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1058:31: 错误：模板实参表语法错误
+ 1058 |             auto headerview = qobject_cast<const QHeaderView*>(widget);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1058:63: 错误：对‘qobject_cast<<expression error> >(const QWidget*&)’的调用没有匹配的函数
+ 1058 |             auto headerview = qobject_cast<const QHeaderView*>(widget);
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1058:63: 附注：there are 5 candidates
+/usr/include/qt6/QtCore/qobject.h:426:10: 附注：备选 1: ‘template<class T> T qobject_cast(QObject*)’
+  426 | inline T qobject_cast(QObject *object)
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:426:10: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1058:63: 错误：模板第 1 个参数无效
+ 1058 |             auto headerview = qobject_cast<const QHeaderView*>(widget);
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:432:10: 附注：备选 2: ‘template<class T> T qobject_cast(const QObject*)’
+  432 | inline T qobject_cast(const QObject *object)
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:432:10: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1058:63: 错误：模板第 1 个参数无效
+ 1058 |             auto headerview = qobject_cast<const QHeaderView*>(widget);
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:997:1: 附注：candidate 3: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(const QSharedPointer<T>&)’
+  997 | qobject_cast(const QSharedPointer<T> &src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:997:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1058:63: 错误：模板第 1 个参数无效
+ 1058 |             auto headerview = qobject_cast<const QHeaderView*>(widget);
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1003:1: 附注：candidate 4: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(QSharedPointer<T>&&)’
+ 1003 | qobject_cast(QSharedPointer<T> &&src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1003:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1058:63: 错误：模板第 1 个参数无效
+ 1058 |             auto headerview = qobject_cast<const QHeaderView*>(widget);
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1009:1: 附注：candidate 5: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(const QWeakPointer<T>&)’
+ 1009 | qobject_cast(const QWeakPointer<T> &src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1009:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1058:63: 错误：模板第 1 个参数无效
+ 1058 |             auto headerview = qobject_cast<const QHeaderView*>(widget);
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1065:44: 错误：对不完全的类型‘const class QAbstractItemView’的非法使用
+ 1065 |                 auto selBehavior = itemview->selectionBehavior();
+      |                                            ^~
+/usr/include/qt6/QtWidgets/qabstractitemdelegate.h:19:7: 附注：forward declaration of ‘class QAbstractItemView’
+   19 | class QAbstractItemView;
+      |       ^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1066:55: 错误：嵌套名指定中使用了不完全的类型‘QAbstractItemView’
+ 1066 |                 if (selBehavior == QAbstractItemView::SelectRows && header->orientation == Qt::Horizontal)
+      |                                                       ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1068:60: 错误：嵌套名指定中使用了不完全的类型‘QAbstractItemView’
+ 1068 |                 else if (selBehavior == QAbstractItemView::SelectColumns && header->orientation == Qt::Vertical)
+      |                                                            ^~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1089:48: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1089 |             fillRectEdges(painter, r, edge, 1, swatch);
+      |                                                ^~~~~~
+      |                                                Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1094:36: 错误：‘ProgressBar_Rounding’不是‘Ph’的成员
+ 1094 |         const qreal rounding = Ph::ProgressBar_Rounding;
+      |                                    ^~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1097:57: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1097 |         paintBorderedRoundRect(painter, rect, rounding, swatch, fgColor, fgColor);
+      |                                                         ^~~~~~
+      |                                                         Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1097:65: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 1097 |         paintBorderedRoundRect(painter, rect, rounding, swatch, fgColor, fgColor);
+      |                                                                 ^~~~~~~
+      |                                                                 QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1098:14: 错误：‘struct {anonymous}::PSave’ has no member named ‘restore’
+ 1098 |         save.restore();
+      |              ^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1099:17: 错误：‘OverhangShadows’不是‘Ph’的成员
+ 1099 |         if (Ph::OverhangShadows && option->state & State_Enabled) {
+      |                 ^~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1116:36: 错误：‘ProgressBar_Rounding’不是‘Ph’的成员
+ 1116 |         const qreal rounding = Ph::ProgressBar_Rounding;
+      |                                    ^~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1119:13: 错误：‘progressBarFillRects’不是‘Ph’的成员
+ 1119 |         Ph::progressBarFillRects(bar, filled, nonFilled, isIndeterminate);
+      |             ^~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1122:63: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1122 |             paintBorderedRoundRect(painter, filled, rounding, swatch, fgColor, fgColor);
+      |                                                               ^~~~~~
+      |                                                               Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1122:71: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 1122 |             paintBorderedRoundRect(painter, filled, rounding, swatch, fgColor, fgColor);
+      |                                                                       ^~~~~~~
+      |                                                                       QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1147:13: 错误：‘progressBarFillRects’不是‘Ph’的成员
+ 1147 |         Ph::progressBarFillRects(bar, filled, nonFilled, isIndeterminate);
+      |             ^~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1159:29: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1159 |             painter->setPen(swatch.pen(fgColor));
+      |                             ^~~~~~
+      |                             Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1159:40: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 1159 |             painter->setPen(swatch.pen(fgColor));
+      |                                        ^~~~~~~
+      |                                        QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1171:29: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1171 |             painter->setPen(swatch.pen(fgColor));
+      |                             ^~~~~~
+      |                             Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1171:40: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 1171 |             painter->setPen(swatch.pen(fgColor));
+      |                                        ^~~~~~~
+      |                                        QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1196:37: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 1196 |         Swatchy fill = isSelected ? fgColor : fgColor;
+      |                                     ^~~~~~~
+      |                                     QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1197:30: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1197 |         painter->fillRect(r, swatch);
+      |                              ^~~~~~
+      |                              Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1201:17: 错误：‘MenuBarDrawBorder’不是‘Ph’的成员
+ 1201 |         if (Ph::MenuBarDrawBorder && !isSelected) {
+      |                 ^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1211:34: 错误：‘Ph::MenuItemMetrics’尚未声明
+ 1211 |         const auto metrics = Ph::MenuItemMetrics::ofFontHeight(option->fontMetrics.height());
+      |                                  ^~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1222:58: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1222 |             fillRectEdges(painter, r, Qt::BottomEdge, 1, swatch);
+      |                                                          ^~~~~~
+      |                                                          Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1241:31: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1241 |             painter->setBrush(swatch);
+      |                               ^~~~~~
+      |                               Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1251:35: 错误：‘menuItemCheckRect’不是‘Ph’的成员
+ 1251 |             QRect checkRect = Ph::menuItemCheckRect(metrics, option->direction, itemRect, hasSubMenu);
+      |                                   ^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1252:46: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 1252 |             Swatchy signColor = !isEnabled ? fgColor : isSelected ? fgColor /*fgColor*/ : fgColor;
+      |                                              ^~~~~~~
+      |                                              QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1274:76: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1274 |                     drawCheck(painter, d->checkBox_pen_scratch, checkRect, swatch, signColor);
+      |                                                                            ^~~~~~
+      |                                                                            Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1282:34: 错误：‘menuItemIconRect’不是‘Ph’的成员
+ 1282 |             QRect iconRect = Ph::menuItemIconRect(metrics, option->direction, itemRect, hasSubMenu);
+      |                                  ^~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1300:51: 警告：‘QPixmap QIcon::pixmap(QWindow*, const QSize&, Mode, State) const’ 已被弃用: Use pixmap(size, devicePixelRatio) instead [-Wdeprecated-declarations]
+ 1300 |             QPixmap pixmap = menuItem->icon.pixmap(window, iconSize, mode, state);
+      |                              ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtGui/qicon.h:213:13: 附注：在此声明
+  213 |     QPixmap pixmap(QWindow *window, const QSize &size, Mode mode = Normal, State state = Off) const;
+      |             ^~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1308:21: 错误：变量‘QStringRef s’有初始值设定，但是类型不完全
+ 1308 |         QStringRef s(&menuItem->text);
+      |                     ^
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1311:21: 错误：‘menuItemTextRect’不是‘Ph’的成员
+ 1311 |                 Ph::menuItemTextRect(metrics, option->direction, itemRect, hasSubMenu, hasIcon, menuItem->tabWidth);
+      |                     ^~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1311:107: 错误：‘const class QStyleOptionMenuItem’ has no member named ‘tabWidth’
+ 1311 |                 Ph::menuItemTextRect(metrics, option->direction, itemRect, hasSubMenu, hasIcon, menuItem->tabWidth);
+      |                                                                                                           ^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1320:29: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1320 |             painter->setPen(swatch.pen(isSelected ? fgColor /*fgColor*/ : fgColor));
+      |                             ^~~~~~
+      |                             Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1320:53: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 1320 |             painter->setPen(swatch.pen(isSelected ? fgColor /*fgColor*/ : fgColor));
+      |                                                     ^~~~~~~
+      |                                                     QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1370:25: 错误：‘menuItemMnemonicRect’不是‘Ph’的成员
+ 1370 |                     Ph::menuItemMnemonicRect(metrics, option->direction, itemRect, hasSubMenu, menuItem->tabWidth);
+      |                         ^~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1370:106: 错误：‘const class QStyleOptionMenuItem’ has no member named ‘tabWidth’
+ 1370 |                     Ph::menuItemMnemonicRect(metrics, option->direction, itemRect, hasSubMenu, menuItem->tabWidth);
+      |                                                                                                          ^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1371:34: 错误：变量‘const QStringRef textToDrawRef’有初始值设定，但是类型不完全
+ 1371 |                 const QStringRef textToDrawRef = s.mid(t + 1);
+      |                                  ^~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1376:30: 错误：变量‘const QStringRef textToDrawRef’有初始值设定，但是类型不完全
+ 1376 |             const QStringRef textToDrawRef = s.left(t);
+      |                              ^~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1384:35: 错误：‘menuItemArrowRect’不是‘Ph’的成员
+ 1384 |             QRect arrowRect = Ph::menuItemArrowRect(metrics, option->direction, itemRect);
+      |                                   ^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1385:47: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 1385 |             Swatchy arrowColor = isSelected ? fgColor : fgColor;
+      |                                               ^~~~~~~
+      |                                               QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1386:50: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1386 |             drawArrow(painter, arrowRect, arrow, swatch);
+      |                                                  ^~~~~~
+      |                                                  Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1421:49: 警告：‘QPixmap QIcon::pixmap(QWindow*, const QSize&, Mode, State) const’ 已被弃用: Use pixmap(size, devicePixelRatio) instead [-Wdeprecated-declarations]
+ 1421 |             QPixmap pixmap = button->icon.pixmap(window, button->iconSize, mode, state);
+      |                              ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtGui/qicon.h:213:13: 附注：在此声明
+  213 |     QPixmap pixmap(QWindow *window, const QSize &size, Mode mode = Normal, State state = Off) const;
+      |             ^~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1469:17: 错误：‘MenuBarDrawBorder’不是‘Ph’的成员
+ 1469 |         if (Ph::MenuBarDrawBorder) {
+      |                 ^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1470:61: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1470 |             fillRectEdges(painter, rect, Qt::BottomEdge, 1, swatch);
+      |                                                             ^~~~~~
+      |                                                             Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1472:55: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1472 |         painter->fillRect(rect.adjusted(0, 0, 0, -1), swatch);
+      |                                                       ^~~~~~
+      |                                                       Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1486:36: 错误：‘TabBarTab_Rounding’不是‘Ph’的成员
+ 1486 |         const qreal rounding = Ph::TabBarTab_Rounding;
+      |                                    ^~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1510:34: 错误：‘oppositeEdge’不是‘Ph’的成员
+ 1510 |         Qt::Edge innerEdge = Ph::oppositeEdge(outerEdge);
+      |                                  ^~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1511:40: 错误：‘oppositeEdge’不是‘Ph’的成员
+ 1511 |         Qt::Edge edgeAwayNextTab = Ph::oppositeEdge(edgeTowardNextTab);
+      |                                        ^~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1512:41: 错误：too many arguments to function ‘QRect {anonymous}::expandRect(const QRect&, int)’
+ 1512 |         QRect shapeClipRect = expandRect(option->rect, innerEdge, -2);
+      |                               ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:38:25: 附注：在此声明
+   38 |     static inline QRect expandRect(const QRect& r, int i) { return r.adjusted(-i, -i, i, i); }
+      |                         ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1513:36: 错误：too many arguments to function ‘QRect {anonymous}::expandRect(const QRect&, int)’
+ 1513 |         QRect drawRect = expandRect(shapeClipRect, innerEdge, 3 + 2 * rounding + 1);
+      |                          ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:38:25: 附注：在此声明
+   38 |     static inline QRect expandRect(const QRect& r, int i) { return r.adjusted(-i, -i, i, i); }
+      |                         ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1515:34: 错误：too many arguments to function ‘QRect {anonymous}::expandRect(const QRect&, int)’
+ 1515 |             drawRect = expandRect(drawRect, edgeTowardNextTab, tabOverlap);
+      |                        ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:38:25: 附注：在此声明
+   38 |     static inline QRect expandRect(const QRect& r, int i) { return r.adjusted(-i, -i, i, i); }
+      |                         ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1516:39: 错误：too many arguments to function ‘QRect {anonymous}::expandRect(const QRect&, int)’
+ 1516 |             shapeClipRect = expandRect(shapeClipRect, edgeTowardNextTab, tabOverlap);
+      |                             ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:38:25: 附注：在此声明
+   38 |     static inline QRect expandRect(const QRect& r, int i) { return r.adjusted(-i, -i, i, i); }
+      |                         ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1520:34: 错误：too many arguments to function ‘QRect {anonymous}::expandRect(const QRect&, int)’
+ 1520 |             drawRect = expandRect(drawRect, outerEdge, -offset);
+      |                        ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:38:25: 附注：在此声明
+   38 |     static inline QRect expandRect(const QRect& r, int i) { return r.adjusted(-i, -i, i, i); }
+      |                         ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1527:29: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 1527 |             tabFrameColor = fgColor;
+      |                             ^~~~~~~
+      |                             QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1533:32: 错误：‘TabBar_InactiveTabsHaveSpecular’不是‘Ph’的成员
+ 1533 |                 specular = Ph::TabBar_InactiveTabsHaveSpecular ? fgColor : 0;
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1536:29: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 1536 |             tabFrameColor = fgColor;
+      |                             ^~~~~~~
+      |                             QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1542:32: 错误：‘TabBar_InactiveTabsHaveSpecular’不是‘Ph’的成员
+ 1542 |                 specular = Ph::TabBar_InactiveTabsHaveSpecular ? fgColor : 0;
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1545:40: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 1545 |         auto frameColor = isSelected ? fgColor : fgColor;
+      |                                        ^~~~~~~
+      |                                        QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1546:61: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1546 |         paintBorderedRoundRect(painter, drawRect, rounding, swatch, frameColor, thisFillColor);
+      |                                                             ^~~~~~
+      |                                                             Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1553:54: 错误：‘Ph::DeriveColors’尚未声明
+ 1553 |             painter->fillRect(highlightRectSpec, Ph::DeriveColors::lightSpecularOf(swatch));
+      |                                                      ^~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1556:36: 错误：‘rectFromInnerEdgeWithThickness’不是‘Ph’的成员
+ 1556 |             QRect refillRect = Ph::rectFromInnerEdgeWithThickness(shapeClipRect, innerEdge, 2);
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1557:30: 错误：‘rectTranslatedTowardEdge’不是‘Ph’的成员
+ 1557 |             refillRect = Ph::rectTranslatedTowardEdge(refillRect, innerEdge, 2);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1558:36: 错误：too many arguments to function ‘QRect {anonymous}::expandRect(const QRect&, int)’
+ 1558 |             refillRect = expandRect(refillRect, edgeAwayNextTab | edgeTowardNextTab, -1);
+      |                          ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:38:25: 附注：在此声明
+   38 |     static inline QRect expandRect(const QRect& r, int i) { return r.adjusted(-i, -i, i, i); }
+      |                         ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1582:51: 错误：ISO C++ 不允许声明无类型的‘type name’ [-fpermissive]
+ 1582 |         if (auto tableWidget = qobject_cast<const QTableView*>(widget)) {
+      |                                                   ^~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1582:32: 错误：模板实参表语法错误
+ 1582 |         if (auto tableWidget = qobject_cast<const QTableView*>(widget)) {
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1582:63: 错误：对‘qobject_cast<<expression error> >(const QWidget*&)’的调用没有匹配的函数
+ 1582 |         if (auto tableWidget = qobject_cast<const QTableView*>(widget)) {
+      |                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1582:63: 附注：there are 5 candidates
+/usr/include/qt6/QtCore/qobject.h:426:10: 附注：备选 1: ‘template<class T> T qobject_cast(QObject*)’
+  426 | inline T qobject_cast(QObject *object)
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:426:10: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1582:63: 错误：模板第 1 个参数无效
+ 1582 |         if (auto tableWidget = qobject_cast<const QTableView*>(widget)) {
+      |                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:432:10: 附注：备选 2: ‘template<class T> T qobject_cast(const QObject*)’
+  432 | inline T qobject_cast(const QObject *object)
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:432:10: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1582:63: 错误：模板第 1 个参数无效
+ 1582 |         if (auto tableWidget = qobject_cast<const QTableView*>(widget)) {
+      |                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:997:1: 附注：candidate 3: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(const QSharedPointer<T>&)’
+  997 | qobject_cast(const QSharedPointer<T> &src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:997:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1582:63: 错误：模板第 1 个参数无效
+ 1582 |         if (auto tableWidget = qobject_cast<const QTableView*>(widget)) {
+      |                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1003:1: 附注：candidate 4: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(QSharedPointer<T>&&)’
+ 1003 | qobject_cast(QSharedPointer<T> &&src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1003:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1582:63: 错误：模板第 1 个参数无效
+ 1582 |         if (auto tableWidget = qobject_cast<const QTableView*>(widget)) {
+      |                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1009:1: 附注：candidate 5: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(const QWeakPointer<T>&)’
+ 1009 | qobject_cast(const QWeakPointer<T> &src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1009:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1582:63: 错误：模板第 1 个参数无效
+ 1582 |         if (auto tableWidget = qobject_cast<const QTableView*>(widget)) {
+      |                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1587:44: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1587 |             fillRectOutline(painter, r, 1, swatch);
+      |                                            ^~~~~~
+      |                                            Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1599:38: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1599 |                 painter->fillRect(r, swatch);
+      |                                      ^~~~~~
+      |                                      Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1607:38: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1607 |                 painter->fillRect(r, swatch);
+      |                                      ^~~~~~
+      |                                      Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: In member function ‘virtual void BaseStyle::drawComplexControl(QStyle::ComplexControl, const QStyleOptionComplex*, QPainter*, const QWidget*) const’:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1818:29: 错误：‘getCachedSwatchOfQPalette’不是‘Ph’的成员
+ 1818 |     auto ph_swatchPtr = Ph::getCachedSwatchOfQPalette(d->swatchCache, &d->headSwatchFastKey, option->palette);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1819:15: 错误：‘Phantom’不是命名空间‘Ph’中的一个类型名
+ 1819 |     const Ph::Phantom::Color& swatch = *ph_swatchPtr.data();
+      |               ^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1879:36: 错误：‘SpinBox_Rounding’不是‘Ph’的成员
+ 1879 |         const qreal rounding = Ph::SpinBox_Rounding;
+      |                                    ^~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1894:61: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1894 |             paintBorderedRoundRect(painter, rect, rounding, swatch, 0, fgColor);
+      |                                                             ^~~~~~
+      |                                                             Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1894:72: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 1894 |             paintBorderedRoundRect(painter, rect, rounding, swatch, 0, fgColor);
+      |                                                                        ^~~~~~~
+      |                                                                        QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1900:53: 错误：‘oppositeEdge’不是‘Ph’的成员
+ 1900 |                 painter, expandRect(upDownRect, Ph::oppositeEdge(edge), -1), rounding, swatch, 0, fgColor);
+      |                                                     ^~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1902:21: 错误：‘OverhangShadows’不是‘Ph’的成员
+ 1902 |             if (Ph::OverhangShadows && !hasFocus && isEnabled) {
+      |                     ^~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1925:18: 错误：‘struct {anonymous}::PSave’ has no member named ‘restore’
+ 1925 |             save.restore();
+      |                  ^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1934:74: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 1934 |                 spinBox->stepEnabled & QAbstractSpinBox::StepUpEnabled ? fgColor : fgColor;
+      |                                                                          ^~~~~~~
+      |                                                                          QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1937:29: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1937 |             painter->setPen(swatch.pen(arrowColorUp));
+      |                             ^~~~~~
+      |                             Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:1949:27: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 1949 |                           swatch,
+      |                           ^~~~~~
+      |                           Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2025:21: 错误：‘drawMdiButton’不是‘Ph’的成员
+ 2025 |                 Ph::drawMdiButton(painter, titleBar, minButtonRect, hover, sunken);
+      |                     ^~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2056:21: 错误：‘drawMdiButton’不是‘Ph’的成员
+ 2056 |                 Ph::drawMdiButton(painter, titleBar, maxButtonRect, hover, sunken);
+      |                     ^~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2084:21: 错误：‘drawMdiButton’不是‘Ph’的成员
+ 2084 |                 Ph::drawMdiButton(painter, titleBar, closeButtonRect, hover, sunken);
+      |                     ^~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2138:21: 错误：‘drawMdiButton’不是‘Ph’的成员
+ 2138 |                 Ph::drawMdiButton(painter, titleBar, normalButtonRect, hover, sunken);
+      |                     ^~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2185:21: 错误：‘drawMdiButton’不是‘Ph’的成员
+ 2185 |                 Ph::drawMdiButton(painter, titleBar, contextHelpButtonRect, hover, sunken);
+      |                     ^~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2202:21: 错误：‘drawMdiButton’不是‘Ph’的成员
+ 2202 |                 Ph::drawMdiButton(painter, titleBar, shadeButtonRect, hover, sunken);
+      |                     ^~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2203:89: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 2203 |                 drawArrow(painter, shadeButtonRect.adjusted(5, 7, -5, -7), Qt::UpArrow, swatch);
+      |                                                                                         ^~~~~~
+      |                                                                                         Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2215:21: 错误：‘drawMdiButton’不是‘Ph’的成员
+ 2215 |                 Ph::drawMdiButton(painter, titleBar, unshadeButtonRect, hover, sunken);
+      |                     ^~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2216:93: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 2216 |                 drawArrow(painter, unshadeButtonRect.adjusted(5, 7, -5, -7), Qt::DownArrow, swatch);
+      |                                                                                             ^~~~~~
+      |                                                                                             Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2257:48: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 2257 |             painter->fillRect(scrollBarGroove, swatch);
+      |                                                ^~~~~~
+      |                                                Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2266:48: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 2266 |             painter->fillRect(scrollBarSlider, swatch);
+      |                                                ^~~~~~
+      |                                                Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2280:49: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 2280 |             painter->fillRect(scrollBarSubLine, swatch);
+      |                                                 ^~~~~~
+      |                                                 Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2285:49: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 2285 |             painter->fillRect(scrollBarAddLine, swatch);
+      |                                                 ^~~~~~
+      |                                                 Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2301:45: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 2301 |             Swatchy buttonFill = isSunken ? fgColor : fgColor;
+      |                                             ^~~~~~~
+      |                                             QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2304:37: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 2304 |             painter->fillRect(rect, swatch);
+      |                                     ^~~~~~
+      |                                     Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2352:92: 错误：‘ComboBox_ArrowMarginRatio’不是‘Ph’的成员
+ 2352 |                 static_cast<int>(qMin(downArrowRect.width(), downArrowRect.height()) * Ph::ComboBox_ArrowMarginRatio);
+      |                                                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2356:50: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 2356 |             drawArrow(painter, r, Qt::DownArrow, swatch);
+      |                                                  ^~~~~~
+      |                                                  Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2370:32: 错误：‘fgColor’ was not declared in this scope; did you mean ‘QColor’?
+ 2370 |         Swatchy outlineColor = fgColor;
+      |                                ^~~~~~~
+      |                                QColor
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2379:57: 错误：‘SliderGroove_Rounding’不是‘Ph’的成员
+ 2379 |             paintBorderedRoundRect(painter, groove, Ph::SliderGroove_Rounding, swatch, outlineColor, gutterColor);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2379:80: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 2379 |             paintBorderedRoundRect(painter, groove, Ph::SliderGroove_Rounding, swatch, outlineColor, gutterColor);
+      |                                                                                ^~~~~~
+      |                                                                                Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2383:29: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 2383 |             painter->setPen(swatch.pen(fgColor));
+      |                             ^~~~~~
+      |                             Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2451:52: 错误：‘SliderHandle_Rounding’不是‘Ph’的成员
+ 2451 |             paintBorderedRoundRect(painter, r, Ph::SliderHandle_Rounding, swatch, handleOutline, handleFill);
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2451:75: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 2451 |             paintBorderedRoundRect(painter, r, Ph::SliderHandle_Rounding, swatch, handleOutline, handleFill);
+      |                                                                           ^~~~~~
+      |                                                                           Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2453:52: 错误：‘SliderHandle_Rounding’不是‘Ph’的成员
+ 2453 |             paintBorderedRoundRect(painter, r, Ph::SliderHandle_Rounding, swatch, handleSpecular, 0);
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2459:17: 错误：‘AllowToolBarAutoRaise’不是‘Ph’的成员
+ 2459 |         if (Ph::AllowToolBarAutoRaise || !tbopt || !widget || !widget->parent()
+      |                 ^~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2472:17: 错误：‘drawDial’不是‘Ph’的成员
+ 2472 |             Ph::drawDial(dial, painter);
+      |                 ^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: In member function ‘virtual int BaseStyle::pixelMetric(QStyle::PixelMetric, const QStyleOption*, const QWidget*) const’:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2522:10: 警告：‘QStyle::PM_DialogButtonsSeparator’ 已被弃用: Not used and no effect since Qt 4 [-Wdeprecated-declarations]
+ 2522 |     case PM_DialogButtonsSeparator:
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~
+包含于文件 /usr/include/qt6/QtWidgets/qstyleoption.h:19,
+        于 /usr/include/qt6/QtWidgets/qabstractitemdelegate.h:10:
+/usr/include/qt6/QtWidgets/qstyle.h:471:9: 附注：在此声明
+  471 |         PM_DialogButtonsSeparator Q_DECL_ENUMERATOR_DEPRECATED_X("Not used and no effect since Qt 4"),
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2549:19: 错误：‘MenuBar_ItemSpacing’不是‘Ph’的成员
+ 2549 |         val = Ph::MenuBar_ItemSpacing / 2;
+      |                   ^~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2553:18: 错误：‘MenuBarLeftMargin’不是‘Ph’的成员
+ 2553 |         if (!Ph::MenuBarLeftMargin || !widget) {
+      |                  ^~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2557:53: 错误：‘MenuBar_HorizontalPaddingFontRatio’不是‘Ph’的成员
+ 2557 |         return widget->fontMetrics().height() * Ph::MenuBar_HorizontalPaddingFontRatio;
+      |                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2573:19: 错误：‘MenuBar_FrameWidth’不是‘Ph’的成员
+ 2573 |         val = Ph::MenuBar_FrameWidth;
+      |                   ^~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2620:68: 错误：‘TabBar_HPaddingFontRatio’不是‘Ph’的成员
+ 2620 |         return static_cast<int>(option->fontMetrics.height() * Ph::TabBar_HPaddingFontRatio)
+      |                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2625:68: 错误：‘TabBar_VPaddingFontRatio’不是‘Ph’的成员
+ 2625 |         return static_cast<int>(option->fontMetrics.height() * Ph::TabBar_VPaddingFontRatio)
+      |                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2639:19: 错误：‘TabBar_InctiveVShift’不是‘Ph’的成员
+ 2639 |         val = Ph::TabBar_InctiveVShift;
+      |                   ^~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: In member function ‘virtual QSize BaseStyle::sizeFromContents(QStyle::ContentsType, const QStyleOption*, const QSize&, const QWidget*) const’:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2718:17: 错误：‘UseQMenuForComboBoxPopup’不是‘Ph’的成员
+ 2718 |         if (Ph::UseQMenuForComboBoxPopup && qobject_cast<const QComboBox*>(widget)) {
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2725:28: 错误：‘Ph::MenuItemMetrics’尚未声明
+ 2725 |         auto metrics = Ph::MenuItemMetrics::ofFontHeight(fontMetricsHeight);
+      |                            ^~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: In member function ‘virtual void BaseStyle::unpolish(QWidget*)’:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3031:19: 错误：对不完全的类型‘class ShadowHelper’的非法使用
+ 3031 |     m_shadowHelper->unregisterWidget(widget);
+      |                   ^~
+/home/yong/qt-plugins/widgetstyle/basestyle.h:19:7: 附注：forward declaration of ‘class ShadowHelper’
+   19 | class ShadowHelper;
+      |       ^~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: In member function ‘bool BaseStyle::isDarkMode() const’:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3036:5: 错误：‘QSettings’ was not declared in this scope; did you mean ‘QString’?
+ 3036 |     QSettings settings(QSettings::UserScope, "cutefishos", "theme");
+      |     ^~~~~~~~~
+      |     QString
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3037:12: 错误：‘settings’ was not declared in this scope; did you mean ‘setns’?
+ 3037 |     return settings.value("DarkMode", false).toBool();
+      |            ^~~~~~~~
+      |            setns
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: In member function ‘virtual QRect BaseStyle::subControlRect(QStyle::ComplexControl, const QStyleOptionComplex*, QStyle::SubControl, const QWidget*) const’:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3111:54: 错误：‘SpinBox_ButtonWidth’不是‘Ph’的成员
+ 3111 |         const int buttonWidth = static_cast<int>(Ph::SpinBox_ButtonWidth) + 2;
+      |                                                      ^~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3172:33: 错误：‘fontMetricsWidth’不是‘Ph’的成员
+ 3172 |             int textWidth = Ph::fontMetricsWidth(option->fontMetrics, groupBox->text);
+      |                                 ^~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: In member function ‘virtual QPixmap BaseStyle::generatedIconPixmap(QIcon::Mode, const QPixmap&, const QStyleOption*) const’:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3387:17: 错误：‘Ph::DeriveColors’尚未声明
+ 3387 |             Ph::DeriveColors::adjustLightness(opt->palette.color(QPalette::Normal, QPalette::Highlight), .25);
+      |                 ^~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: In member function ‘virtual int BaseStyle::styleHint(QStyle::StyleHint, const QStyleOption*, const QWidget*, QStyleHintReturn*) const’:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3446:18: 错误：‘ShowItemViewDecorationSelected’不是‘Ph’的成员
+ 3446 |         if (!Ph::ShowItemViewDecorationSelected && qobject_cast<const QListView*>(widget))
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3446:71: 错误：ISO C++ 不允许声明无类型的‘type name’ [-fpermissive]
+ 3446 |         if (!Ph::ShowItemViewDecorationSelected && qobject_cast<const QListView*>(widget))
+      |                                                                       ^~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3446:52: 错误：模板实参表语法错误
+ 3446 |         if (!Ph::ShowItemViewDecorationSelected && qobject_cast<const QListView*>(widget))
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3446:82: 错误：对‘qobject_cast<<expression error> >(const QWidget*&)’的调用没有匹配的函数
+ 3446 |         if (!Ph::ShowItemViewDecorationSelected && qobject_cast<const QListView*>(widget))
+      |                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3446:82: 附注：there are 5 candidates
+/usr/include/qt6/QtCore/qobject.h:426:10: 附注：备选 1: ‘template<class T> T qobject_cast(QObject*)’
+  426 | inline T qobject_cast(QObject *object)
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:426:10: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3446:82: 错误：模板第 1 个参数无效
+ 3446 |         if (!Ph::ShowItemViewDecorationSelected && qobject_cast<const QListView*>(widget))
+      |                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:432:10: 附注：备选 2: ‘template<class T> T qobject_cast(const QObject*)’
+  432 | inline T qobject_cast(const QObject *object)
+      |          ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:432:10: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3446:82: 错误：模板第 1 个参数无效
+ 3446 |         if (!Ph::ShowItemViewDecorationSelected && qobject_cast<const QListView*>(widget))
+      |                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:997:1: 附注：candidate 3: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(const QSharedPointer<T>&)’
+  997 | qobject_cast(const QSharedPointer<T> &src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:997:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3446:82: 错误：模板第 1 个参数无效
+ 3446 |         if (!Ph::ShowItemViewDecorationSelected && qobject_cast<const QListView*>(widget))
+      |                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1003:1: 附注：candidate 4: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(QSharedPointer<T>&&)’
+ 1003 | qobject_cast(QSharedPointer<T> &&src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1003:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3446:82: 错误：模板第 1 个参数无效
+ 3446 |         if (!Ph::ShowItemViewDecorationSelected && qobject_cast<const QListView*>(widget))
+      |                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1009:1: 附注：candidate 5: ‘template<class X, class T> QSharedPointer<typename QtSharedPointer::RemovePointer<T>::Type> qobject_cast(const QWeakPointer<T>&)’
+ 1009 | qobject_cast(const QWeakPointer<T> &src)
+      | ^~~~~~~~~~~~
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:1009:1: 附注：template argument deduction/substitution failed:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3446:82: 错误：模板第 1 个参数无效
+ 3446 |         if (!Ph::ShowItemViewDecorationSelected && qobject_cast<const QListView*>(widget))
+      |                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3448:20: 错误：‘ShowItemViewDecorationSelected’不是‘Ph’的成员
+ 3448 |         return Ph::ShowItemViewDecorationSelected;
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3453:35: 错误：嵌套名指定中使用了不完全的类型‘QAbstractItemView’
+ 3453 |         return QAbstractItemView::ScrollPerPixel;
+      |                                   ^~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3482:20: 错误：‘UseQMenuForComboBoxPopup’不是‘Ph’的成员
+ 3482 |         return Ph::UseQMenuForComboBoxPopup;
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3498:33: 错误：‘getCachedSwatchOfQPalette’不是‘Ph’的成员
+ 3498 |         auto ph_swatchPtr = Ph::getCachedSwatchOfQPalette(d->swatchCache, &d->headSwatchFastKey, option->palette);
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3499:19: 错误：‘Phantom’不是命名空间‘Ph’中的一个类型名
+ 3499 |         const Ph::Phantom::Color& swatch = *ph_swatchPtr.data();
+      |                   ^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3502:33: 错误：‘swatch’ was not declared in this scope; did you mean ‘Swatchy’?
+ 3502 |         return static_cast<int>(swatch.rgb());
+      |                                 ^~~~~~
+      |                                 Swatchy
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3507:16: 错误：‘QWizard’未声明
+ 3507 |         return QWizard::ClassicStyle;
+      |                ^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: 在全局域：
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3599:5: 错误：expected unqualified-id before ‘default’
+ 3599 |     default: break;
+      |     ^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3600:5: 错误：expected declaration before ‘}’ token
+ 3600 |     }
+      |     ^
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3601:1: 错误：expected declaration before ‘}’ token
+ 3601 | }
+      | ^
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3603:5: 错误：expected unqualified-id before ‘default’
+ 3603 |     default: break;
+      |     ^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3604:5: 错误：expected declaration before ‘}’ token
+ 3604 |     }
+      |     ^
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3605:1: 错误：expected declaration before ‘}’ token
+ 3605 | }
+      | ^
+包含于文件 /usr/include/qt6/QtGui/qwindowdefs.h:8,
+        于 /usr/include/qt6/QtWidgets/qwidget.h:9:
+/usr/include/qt6/QtCore/qobjectdefs.h: In instantiation of ‘struct QtPrivate::HasQ_OBJECT_Macro<QToolButton>’:
+/usr/include/qt6/QtCore/qobjectdefs.h:748:51:   required from ‘TgtType QtPrivate::qobject_cast_helper(SrcType*) [with TgtType = const QToolButton*; SrcType = const QObject]’
+  748 |         static_assert(HasQ_OBJECT_Macro<ObjType>::Value,
+      |                                                   ^~~~~
+/usr/include/qt6/QtCore/qobject.h:436:45:   required from ‘T qobject_cast(const QObject*) [with T = const QToolButton*]’
+  436 |     return QtPrivate::qobject_cast_helper<T>(object);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:194:60:   required from here
+  194 |             auto tbutton = qobject_cast<const QToolButton*>(widget);
+      |                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:739:37: 错误：嵌套名指定中使用了不完全的类型‘QToolButton’
+  739 |         enum { Value =  sizeof(test(&Object::qt_metacall)) == sizeof(int) };
+      |                                     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h: In instantiation of ‘TgtType QtPrivate::qobject_cast_helper(SrcType*) [with TgtType = const QToolButton*; SrcType = const QObject]’:
+/usr/include/qt6/QtCore/qobject.h:436:45:   required from ‘T qobject_cast(const QObject*) [with T = const QToolButton*]’
+  436 |     return QtPrivate::qobject_cast_helper<T>(object);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:194:60:   required from here
+  194 |             auto tbutton = qobject_cast<const QToolButton*>(widget);
+      |                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:748:51: 错误：静态断言错误：qobject_cast requires the type to have a Q_OBJECT macro
+  748 |         static_assert(HasQ_OBJECT_Macro<ObjType>::Value,
+      |                                                   ^~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:748:51: 附注：‘QtPrivate::HasQ_OBJECT_Macro<QToolButton>::Value’ 总是评估为假
+包含于文件 /usr/include/qt6/QtCore/qglobal.h:13,
+        于 /usr/include/qt6/QtGui/qtguiglobal.h:7,
+        于 /usr/include/qt6/QtWidgets/qtwidgetsglobal.h:8,
+        于 /usr/include/qt6/QtWidgets/qcombobox.h:8:
+/usr/include/c++/15.2.1/type_traits: In instantiation of ‘constexpr const bool std::is_final_v<QToolButton>’:
+/usr/include/qt6/QtCore/qobjectdefs.h:751:28:   required from ‘TgtType QtPrivate::qobject_cast_helper(SrcType*) [with TgtType = const QToolButton*; SrcType = const QObject]’
+  751 |         if constexpr (std::is_final_v<ObjType>) {
+      |                       ~~~~~^~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:436:45:   required from ‘T qobject_cast(const QObject*) [with T = const QToolButton*]’
+  436 |     return QtPrivate::qobject_cast_helper<T>(object);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:194:60:   required from here
+  194 |             auto tbutton = qobject_cast<const QToolButton*>(widget);
+      |                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/c++/15.2.1/type_traits:3550:38: 错误：对不完全的类型‘class QToolButton’的非法使用
+ 3550 |   inline constexpr bool is_final_v = __is_final(_Tp);
+      |                                      ^~~~~~~~~~~~~~~
+/usr/include/qt6/QtGui/qaction.h:234:18: 附注：forward declaration of ‘class QToolButton’
+  234 |     friend class QToolButton;
+      |                  ^~~~~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h: In instantiation of ‘TgtType QtPrivate::qobject_cast_helper(SrcType*) [with TgtType = const QToolButton*; SrcType = const QObject]’:
+/usr/include/qt6/QtCore/qobject.h:436:45:   required from ‘T qobject_cast(const QObject*) [with T = const QToolButton*]’
+  436 |     return QtPrivate::qobject_cast_helper<T>(object);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:194:60:   required from here
+  194 |             auto tbutton = qobject_cast<const QToolButton*>(widget);
+      |                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:752:51: 错误：嵌套名指定中使用了不完全的类型‘ObjType’ {aka ‘QToolButton’}
+  752 |             if (object && object->metaObject() == &ObjType::staticMetaObject)
+      |                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:753:24: 错误：invalid ‘static_cast’ from type ‘const QObject*’ to type ‘const QToolButton*’
+  753 |                 return static_cast<TgtType>(object);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtGui/qaction.h:234:18: 附注：class type ‘const QToolButton’ is incomplete
+  234 |     friend class QToolButton;
+      |                  ^~~~~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:756:67: 错误：嵌套名指定中使用了不完全的类型‘ObjType’ {aka ‘QToolButton’}
+  756 |             return static_cast<TgtType>(ObjType::staticMetaObject.cast(object));
+      |                                                  ~~~~~~~~~~~~~~~~~^~~~
+/usr/include/qt6/QtCore/qobjectdefs.h: In instantiation of ‘struct QtPrivate::HasQ_OBJECT_Macro<QAbstractItemView>’:
+/usr/include/qt6/QtCore/qobjectdefs.h:748:51:   required from ‘TgtType QtPrivate::qobject_cast_helper(SrcType*) [with TgtType = const QAbstractItemView*; SrcType = const QObject]’
+  748 |         static_assert(HasQ_OBJECT_Macro<ObjType>::Value,
+      |                                                   ^~~~~
+/usr/include/qt6/QtCore/qobject.h:436:45:   required from ‘T qobject_cast(const QObject*) [with T = const QAbstractItemView*]’
+  436 |     return QtPrivate::qobject_cast_helper<T>(object);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:475:71:   required from here
+  475 |             if (auto itemView = qobject_cast<const QAbstractItemView*>(widget)) {
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:739:37: 错误：嵌套名指定中使用了不完全的类型‘QAbstractItemView’
+  739 |         enum { Value =  sizeof(test(&Object::qt_metacall)) == sizeof(int) };
+      |                                     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h: In instantiation of ‘TgtType QtPrivate::qobject_cast_helper(SrcType*) [with TgtType = const QAbstractItemView*; SrcType = const QObject]’:
+/usr/include/qt6/QtCore/qobject.h:436:45:   required from ‘T qobject_cast(const QObject*) [with T = const QAbstractItemView*]’
+  436 |     return QtPrivate::qobject_cast_helper<T>(object);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:475:71:   required from here
+  475 |             if (auto itemView = qobject_cast<const QAbstractItemView*>(widget)) {
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:748:51: 错误：静态断言错误：qobject_cast requires the type to have a Q_OBJECT macro
+  748 |         static_assert(HasQ_OBJECT_Macro<ObjType>::Value,
+      |                                                   ^~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:748:51: 附注：‘QtPrivate::HasQ_OBJECT_Macro<QAbstractItemView>::Value’ 总是评估为假
+/usr/include/c++/15.2.1/type_traits: In instantiation of ‘constexpr const bool std::is_final_v<QAbstractItemView>’:
+/usr/include/qt6/QtCore/qobjectdefs.h:751:28:   required from ‘TgtType QtPrivate::qobject_cast_helper(SrcType*) [with TgtType = const QAbstractItemView*; SrcType = const QObject]’
+  751 |         if constexpr (std::is_final_v<ObjType>) {
+      |                       ~~~~~^~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:436:45:   required from ‘T qobject_cast(const QObject*) [with T = const QAbstractItemView*]’
+  436 |     return QtPrivate::qobject_cast_helper<T>(object);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:475:71:   required from here
+  475 |             if (auto itemView = qobject_cast<const QAbstractItemView*>(widget)) {
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/c++/15.2.1/type_traits:3550:38: 错误：对不完全的类型‘class QAbstractItemView’的非法使用
+ 3550 |   inline constexpr bool is_final_v = __is_final(_Tp);
+      |                                      ^~~~~~~~~~~~~~~
+/usr/include/qt6/QtWidgets/qabstractitemdelegate.h:19:7: 附注：forward declaration of ‘class QAbstractItemView’
+   19 | class QAbstractItemView;
+      |       ^~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h: In instantiation of ‘TgtType QtPrivate::qobject_cast_helper(SrcType*) [with TgtType = const QAbstractItemView*; SrcType = const QObject]’:
+/usr/include/qt6/QtCore/qobject.h:436:45:   required from ‘T qobject_cast(const QObject*) [with T = const QAbstractItemView*]’
+  436 |     return QtPrivate::qobject_cast_helper<T>(object);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:475:71:   required from here
+  475 |             if (auto itemView = qobject_cast<const QAbstractItemView*>(widget)) {
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:752:51: 错误：嵌套名指定中使用了不完全的类型‘ObjType’ {aka ‘QAbstractItemView’}
+  752 |             if (object && object->metaObject() == &ObjType::staticMetaObject)
+      |                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:753:24: 错误：invalid ‘static_cast’ from type ‘const QObject*’ to type ‘const QAbstractItemView*’
+  753 |                 return static_cast<TgtType>(object);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtWidgets/qabstractitemdelegate.h:19:7: 附注：class type ‘const QAbstractItemView’ is incomplete
+   19 | class QAbstractItemView;
+      |       ^~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:756:67: 错误：嵌套名指定中使用了不完全的类型‘ObjType’ {aka ‘QAbstractItemView’}
+  756 |             return static_cast<TgtType>(ObjType::staticMetaObject.cast(object));
+      |                                                  ~~~~~~~~~~~~~~~~~^~~~
+/usr/include/qt6/QtCore/qobjectdefs.h: In instantiation of ‘struct QtPrivate::HasQ_OBJECT_Macro<QMenu>’:
+/usr/include/qt6/QtCore/qobjectdefs.h:748:51:   required from ‘TgtType QtPrivate::qobject_cast_helper(SrcType*) [with TgtType = QMenu*; SrcType = QObject]’
+  748 |         static_assert(HasQ_OBJECT_Macro<ObjType>::Value,
+      |                                                   ^~~~~
+/usr/include/qt6/QtCore/qobject.h:428:45:   required from ‘T qobject_cast(QObject*) [with T = QMenu*]’
+  428 |     return QtPrivate::qobject_cast_helper<T>(object);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2993:30:   required from here
+ 2993 |     if (qobject_cast<QMenu *>(widget)) {
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:739:37: 错误：嵌套名指定中使用了不完全的类型‘QMenu’
+  739 |         enum { Value =  sizeof(test(&Object::qt_metacall)) == sizeof(int) };
+      |                                     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h: In instantiation of ‘TgtType QtPrivate::qobject_cast_helper(SrcType*) [with TgtType = QMenu*; SrcType = QObject]’:
+/usr/include/qt6/QtCore/qobject.h:428:45:   required from ‘T qobject_cast(QObject*) [with T = QMenu*]’
+  428 |     return QtPrivate::qobject_cast_helper<T>(object);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2993:30:   required from here
+ 2993 |     if (qobject_cast<QMenu *>(widget)) {
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:748:51: 错误：静态断言错误：qobject_cast requires the type to have a Q_OBJECT macro
+  748 |         static_assert(HasQ_OBJECT_Macro<ObjType>::Value,
+      |                                                   ^~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:748:51: 附注：‘QtPrivate::HasQ_OBJECT_Macro<QMenu>::Value’ 总是评估为假
+/usr/include/c++/15.2.1/type_traits: In instantiation of ‘constexpr const bool std::is_final_v<QMenu>’:
+/usr/include/qt6/QtCore/qobjectdefs.h:751:28:   required from ‘TgtType QtPrivate::qobject_cast_helper(SrcType*) [with TgtType = QMenu*; SrcType = QObject]’
+  751 |         if constexpr (std::is_final_v<ObjType>) {
+      |                       ~~~~~^~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobject.h:428:45:   required from ‘T qobject_cast(QObject*) [with T = QMenu*]’
+  428 |     return QtPrivate::qobject_cast_helper<T>(object);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2993:30:   required from here
+ 2993 |     if (qobject_cast<QMenu *>(widget)) {
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/c++/15.2.1/type_traits:3550:38: 错误：对不完全的类型‘class QMenu’的非法使用
+ 3550 |   inline constexpr bool is_final_v = __is_final(_Tp);
+      |                                      ^~~~~~~~~~~~~~~
+/usr/include/qt6/QtGui/qaction.h:23:7: 附注：forward declaration of ‘class QMenu’
+   23 | class QMenu;
+      |       ^~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h: In instantiation of ‘TgtType QtPrivate::qobject_cast_helper(SrcType*) [with TgtType = QMenu*; SrcType = QObject]’:
+/usr/include/qt6/QtCore/qobject.h:428:45:   required from ‘T qobject_cast(QObject*) [with T = QMenu*]’
+  428 |     return QtPrivate::qobject_cast_helper<T>(object);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2993:30:   required from here
+ 2993 |     if (qobject_cast<QMenu *>(widget)) {
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:752:51: 错误：嵌套名指定中使用了不完全的类型‘ObjType’ {aka ‘QMenu’}
+  752 |             if (object && object->metaObject() == &ObjType::staticMetaObject)
+      |                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:753:24: 错误：invalid ‘static_cast’ from type ‘QObject*’ to type ‘QMenu*’
+  753 |                 return static_cast<TgtType>(object);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtGui/qaction.h:23:7: 附注：class type ‘QMenu’ is incomplete
+   23 | class QMenu;
+      |       ^~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:756:67: 错误：嵌套名指定中使用了不完全的类型‘ObjType’ {aka ‘QMenu’}
+  756 |             return static_cast<TgtType>(ObjType::staticMetaObject.cast(object));
+      |                                                  ~~~~~~~~~~~~~~~~~^~~~
+/usr/include/qt6/QtCore/qobjectdefs.h: In instantiation of ‘TgtType QtPrivate::qobject_cast_helper(SrcType*) [with TgtType = const QMenu*; SrcType = const QObject]’:
+/usr/include/qt6/QtCore/qobject.h:436:45:   required from ‘T qobject_cast(const QObject*) [with T = const QMenu*]’
+  436 |     return QtPrivate::qobject_cast_helper<T>(object);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:3403:48:   required from here
+ 3403 |     if (auto menu = qobject_cast<const QMenu *>(widget)) {
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:748:51: 错误：静态断言错误：qobject_cast requires the type to have a Q_OBJECT macro
+  748 |         static_assert(HasQ_OBJECT_Macro<ObjType>::Value,
+      |                                                   ^~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:748:51: 附注：‘QtPrivate::HasQ_OBJECT_Macro<QMenu>::Value’ 总是评估为假
+/usr/include/qt6/QtCore/qobjectdefs.h:752:51: 错误：嵌套名指定中使用了不完全的类型‘ObjType’ {aka ‘QMenu’}
+  752 |             if (object && object->metaObject() == &ObjType::staticMetaObject)
+      |                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:753:24: 错误：invalid ‘static_cast’ from type ‘const QObject*’ to type ‘const QMenu*’
+  753 |                 return static_cast<TgtType>(object);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtGui/qaction.h:23:7: 附注：class type ‘const QMenu’ is incomplete
+   23 | class QMenu;
+      |       ^~~~~
+/usr/include/qt6/QtCore/qobjectdefs.h:756:67: 错误：嵌套名指定中使用了不完全的类型‘ObjType’ {aka ‘QMenu’}
+  756 |             return static_cast<TgtType>(ObjType::staticMetaObject.cast(object));
+      |                                                  ~~~~~~~~~~~~~~~~~^~~~
+make[2]: *** [widgetstyle/CMakeFiles/cutefish-style.dir/build.make:100：widgetstyle/CMakeFiles/cutefish-style.dir/basestyle.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:231：widgetstyle/CMakeFiles/cutefish-style.dir/all] 错误 2
+make: *** [Makefile:136：all] 错误 2
+make: 离开目录“/home/yong/qt-plugins/build_new/widgetstyle”

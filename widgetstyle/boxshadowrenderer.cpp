@@ -56,7 +56,7 @@ struct BoxLobes
  * @param radius The blur radius.
  * @returns Parameters for three box filters.
  **/
-static QVector<BoxLobes> computeLobes(int radius)
+static QList<BoxLobes> computeLobes(int radius)
 {
     const int blurRadius = calculateBlurRadius(calculateBlurStdDev(radius));
     const int z = blurRadius / 3;
@@ -177,7 +177,7 @@ static inline void boxBlurAlpha(QImage &image, int radius, const QRect &rect = {
         return;
     }
 
-    const QVector<BoxLobes> lobes = computeLobes(radius);
+    const QList<BoxLobes> lobes = computeLobes(radius);
 
     const QRect blurRect = rect.isNull() ? image.rect() : rect;
 
@@ -315,12 +315,13 @@ QImage BoxShadowRenderer::render() const
     }
 
     QSize canvasSize;
-    for (const Shadow &shadow : qAsConst(m_shadows)) {
+    for (const Shadow &shadow : m_shadows) {
         canvasSize = canvasSize.expandedTo(
             calculateMinimumShadowTextureSize(m_boxSize, shadow.radius, shadow.offset));
     }
 
     QImage canvas(canvasSize * m_dpr, QImage::Format_ARGB32_Premultiplied);
+    // Qt6 处理方式
     canvas.setDevicePixelRatio(m_dpr);
     canvas.fill(Qt::transparent);
 
@@ -328,7 +329,7 @@ QImage BoxShadowRenderer::render() const
     boxRect.moveCenter(QRect(QPoint(0, 0), canvasSize).center());
 
     QPainter painter(&canvas);
-    for (const Shadow &shadow : qAsConst(m_shadows)) {
+    for (const Shadow &shadow : m_shadows) {
         renderShadow(&painter, boxRect, m_borderRadius, shadow.offset, shadow.radius, shadow.color);
     }
     painter.end();

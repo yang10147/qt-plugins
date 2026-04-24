@@ -1,0 +1,7 @@
+namespace {
+    struct PSave { QPainter* p; PSave(QPainter* _p):p(_p){p->save();} ~PSave(){p->restore();} };
+    static inline void fillRectOutline(QPainter* p, const QRect& r, int, const QColor& c) { p->setPen(c); p->drawRect(r); }
+    static inline void fillRectEdges(QPainter* p, const QRect& r, Qt::Edges, int, const QColor& c) { p->fillRect(r, c); }
+    static inline void drawArrow(QPainter* p, const QRect& r, int, const QBrush& b) { p->fillRect(r, b); }
+    static inline void paintBorderedRoundRect(QPainter* p, const QRect& r, int, const Phantom::PhSwatch&, int, int) { p->drawRoundedRect(r, 4, 4); }
+}

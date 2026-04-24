@@ -1,0 +1,37 @@
+[  0%] Built target cutefish-platformtheme_autogen_timestamp_deps
+[  4%] Built target cutefish-platformtheme_autogen
+[ 54%] Built target cutefish-platformtheme
+[ 54%] Built target cutefish-style_autogen_timestamp_deps
+[ 58%] Built target cutefish-style_autogen
+[ 62%] Building CXX object widgetstyle/CMakeFiles/cutefish-style.dir/basestyle.cpp.o
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: In member function ‘virtual void BaseStyle::drawComplexControl(QStyle::ComplexControl, const QStyleOptionComplex*, QPainter*, const QWidget*) const’:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2185:96: 错误：conversion from ‘int’ to ‘const QColor’ is ambiguous
+ 2185 |                 painter, expandRect(upDownRect, Ph::oppositeEdge(edge), -1), rounding, swatch, 0, fgColor);
+      |                                                                                                ^
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2185:96: 附注：there are 2 candidates
+包含于文件 /usr/include/qt6/QtGui/qpixmap.h:9,
+        于 /usr/include/qt6/QtGui/qicon.h:10,
+        于 /usr/include/qt6/QtWidgets/qstyle.h:12,
+        于 /usr/include/qt6/QtWidgets/qcommonstyle.h:9,
+        于 /usr/include/qt6/QtWidgets/QCommonStyle:1,
+        于 /home/yong/qt-plugins/widgetstyle/basestyle.h:12,
+        于 /home/yong/qt-plugins/widgetstyle/basestyle.cpp:1:
+/usr/include/qt6/QtGui/qcolor.h:280:8: 附注：备选 1: ‘QColor::QColor(const char*)’
+  280 | inline QColor::QColor(const char *aname)
+      |        ^~~~~~
+/usr/include/qt6/QtGui/qcolor.h:47:5: 附注：备选 2: ‘QColor::QColor(QRgb)’
+   47 |     QColor(QRgb rgb) noexcept;
+      |     ^~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:327:121: 附注：initializing argument 5 of ‘void {anonymous}::paintBorderedRoundRect(QPainter*, const QRect&, int, const QColor&, const QColor&, const QColor&)’
+  327 |     static inline void paintBorderedRoundRect(QPainter* p, const QRect& r, int rounding, const QColor& c, const QColor& outline, const QColor& fill) {
+      |                                                                                                           ~~~~~~~~~~~~~~^~~~~~~
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp: In member function ‘virtual int BaseStyle::pixelMetric(QStyle::PixelMetric, const QStyleOption*, const QWidget*) const’:
+/home/yong/qt-plugins/widgetstyle/basestyle.cpp:2807:10: 警告：‘QStyle::PM_DialogButtonsSeparator’ 已被弃用: Not used and no effect since Qt 4 [-Wdeprecated-declarations]
+ 2807 |     case PM_DialogButtonsSeparator:
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/qt6/QtWidgets/qstyle.h:471:9: 附注：在此声明
+  471 |         PM_DialogButtonsSeparator Q_DECL_ENUMERATOR_DEPRECATED_X("Not used and no effect since Qt 4"),
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+make[2]: *** [widgetstyle/CMakeFiles/cutefish-style.dir/build.make:100：widgetstyle/CMakeFiles/cutefish-style.dir/basestyle.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:231：widgetstyle/CMakeFiles/cutefish-style.dir/all] 错误 2
+make: *** [Makefile:136：all] 错误 2

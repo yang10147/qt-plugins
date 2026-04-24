@@ -1,0 +1,9 @@
+[  0%] Built target cutefish-platformtheme_autogen_timestamp_deps
+[  4%] Built target cutefish-platformtheme_autogen
+[ 54%] Built target cutefish-platformtheme
+[ 54%] Built target cutefish-style_autogen_timestamp_deps
+[ 58%] Automatic MOC and UIC for target cutefish-style
+[ 58%] Built target cutefish-style_autogen
+[ 62%] Building CXX object widgetstyle/CMakeFiles/cutefish-style.dir/basestyle.cpp.o
+[ 66%] Linking CXX shared module libcutefish-style.so
+[100%] Built target cutefish-style

@@ -1,0 +1,2 @@
+/usr/local/lib/qt6/plugins/platformthemes/libcutefish-platformtheme.so
+/usr/local/lib/qt6/plugins/styles/libcutefish-style.so

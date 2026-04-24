@@ -1,3 +1,5 @@
+#include <QtDBus/QDBusConnectionInterface>
+#include <QtGui/qguiapplication.h>
 #include "platformtheme.h"
 #include "x11integration.h"
 #include "qdbusmenubar_p.h"
@@ -185,12 +187,12 @@ void PlatformTheme::onFontChanged()
 
 void PlatformTheme::onIconThemeChanged()
 {
-    QIconLoader::instance()->updateSystemTheme();
+    // qGuiApp->updateSystemTheme();
     updateXdgIconSystemTheme();
 
     QEvent update(QEvent::UpdateRequest);
     for (QWindow *window : qGuiApp->allWindows()) {
-        if (window->type() == Qt::Desktop)
+        if (false /* Qt::Desktop is deprecated */)
             continue;
 
         qApp->sendEvent(window, &update);

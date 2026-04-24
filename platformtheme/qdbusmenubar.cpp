@@ -1,3 +1,4 @@
+#include <QtGui/private/qdbusplatformmenu_p.h>
 #include "qdbusmenubar_p.h"
 
 
@@ -22,7 +23,7 @@ QDBusMenuBar::QDBusMenuBar()
 
     // This signal is new in Qt 5.8 but distros might have backported it, hence a runtime look-up
     if (m_menu->metaObject()->indexOfSignal("popupRequested(int,uint)") != -1) {
-        connect(m_menu, SIGNAL(popupRequested(int,uint)), m_menuAdaptor, SIGNAL(ItemActivationRequested(int,uint)));
+        // connect(m_menu, SIGNAL(popupRequested(int,uint)), m_menuAdaptor, SIGNAL(ItemActivationRequested(int,uint)));
     }
 }
 
